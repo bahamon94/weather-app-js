@@ -1,19 +1,22 @@
 <template>
-  <div id="clima_wraper">
-    <div class="climaCard">
-      <div class="actualTemp">
-        <span class="temp">23&deg;</span>
-        <span class="ubicacion">Bruselas</span>
-      </div>
-      <div class="actualClima">
-        <span class="condiciones">&#xf00d;</span>
-        <div class="info">
-          <span class="lluvia">1.03m</span>
-          <span class="viento">10MPH</span>
-        </div>
-      </div>
-    </div> 
-  </div>
+	<div class="course">
+		<div class="course-info">
+			<img src="@/assets/images/cloud.svg">
+		</div>
+
+		<div class="interior">
+			<h5 class="city">Singapore</h5>
+			<h5 class="degree">25&#176;c</h5>
+		</div>
+
+		<div class="course-progress">
+			<div class="progress-container">
+				<div class="progress-text">
+					32 / 23
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -23,98 +26,89 @@ export default {
 </script>
 
 <style scoped>
-@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
-#clima_wraper{
-	width: 300px;
-	margin: 80px auto;
+*{
+	box-sizing: border-box;
 }
-.climaCard{
-	width: 300px;
-	height: 100px;
-	font-family: 'Open Sans';
+.course{
+	height: 80px;
+	width: 280px;
+	background: #ffffff;
+	border-radius: 14px;
+	/* box-shadow: 1px 5px 40px  rgba(0,0,0,0,0.2) ; */
+	display: inline-block;
+	overflow: hidden;
+-webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.2);
+box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.2);
+}
+
+.course-info{
+	
+	float: left;
+	padding: 10px;
 	position: relative;
+	width: 60%;
 }
-.actualTemp{
-	width: 220px;
-	height: 200px;
-	background: rgb(41, 41, 41);
+
+.course-progress{
+	border-radius: 14px;
+	background: #7952b3;
+	color: #ffffff;
+	right:  1;
+	float: left;
+	margin-left: 40px;
+	padding: 35px;
+	height: 80px;
+}
+.course h2{
+	letter-spacing: 1px;
+	margin: 10px 0px;
+}
+.course h6{
+	letter-spacing: 1px;
+	opacity: 0.8;
+	text-transform: capitalize;
+	margin: 10px 0px;
+}
+
+.progress-container {
 	position: absolute;
-	top: 0;
-	left: 0;
-}
-.actualClima{
-	width: 180px;
-	height: 200px;
-	background: rgb(237, 237, 237);
-	margin: 0;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-.temp{
-	font-size: 80px;
 	text-align: center;
-	display: block;
-	font-weight: 300;
-	color: rgb(255, 255, 255);
-	padding: 20px 0 0;
+	margin-left: -30px;
 }
-.ubicacion{
-	color: rgb(255, 255, 255);
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 30px;
-	display: block;
+.progress-text{
+	font-size: 16px;
+	opacity: 0.8;
+	letter-spacing: 1px	;
+	font-weight: bold;
+	
 }
-.condiciones{
-	font-family: weathericons;
-	font-size: 80px;
-	display: block;
-	padding: 20px 0 0;
-	text-align: center;
-}
-.info{
-	width: 180px;
-	height: 50px;
+.course .city{
 	position: absolute;
-	bottom: 0;
-	right: 0;
-	background: rgb(42, 178, 234);
-	font-weight: 700;
-	color: rgb(255, 255, 255);
-	text-align: center;
-}
-.lluvia {
-	width: 50%;
+	right: 10;
+	width: 200px;
+	color: rgb(0, 0, 0);
+	margin: 20px 95px;
+} 
+.course .degree{
 	position: absolute;
-	left: 10px;
-	word-spacing: 60px;
-	top: 3px;
+	right: 10;
+	width: 200px;
+	color: rgb(0, 0, 0);
+	margin: 50px 110px;
+} 
+
+
+@media screen and (max-width: 740px)  {
+	.course-progress, .course-info{
+		width: 100%;
+		height: 200px;
+		float: none;
+	}
+	.course-info {
+		height: 140px;
+	}
 }
-.lluvia::before{
-	display: block;
-	content: '\f04e';
-	font-family: weathericons;
-	font-size: 40px;
-	left: 6px;
-	top: -4px;
-	position: absolute;
-}
-.viento {
-	width: 50%;
-	right: -10px;
-	position: absolute;
-	word-spacing: 60px;
-	top: 3px;
-}
-.viento::before{
-	display: block;
-	content: '\f050';
-	font-family: weathericons;
-	font-size: 25px;
-	left: -10px;
-	position: absolute;
-	top: 5px;
-}
+
+
 </style>
