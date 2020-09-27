@@ -1,20 +1,25 @@
 # weather-app-js
 
-## Build Setup
+## Demo
+El repositorio del frontEnd donde se utiliza el backend de ejemplo
 
+git clone https://github.com/bahamon94/weather-app-js
 ```bash
 # install dependencies
 $ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
 # build for production and launch server
 $ npm run build
 $ npm run start
-
 # generate static project
 $ npm run generate
 ```
+## Demo
+# serve with hot reload at localhost:3000
+$ npm run dev
+http://localhost:3000/
+
+
+
+
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
