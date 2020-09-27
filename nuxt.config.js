@@ -26,6 +26,8 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     '@nuxtjs/fontawesome',
+    //env Varibles de entorno
+    '@nuxtjs/dotenv',
   ],
   fontawesome:{
     component: 'fa',
@@ -39,7 +41,14 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    '@nuxt/http',
   ],
+  http: {
+    // proxyHeaders: false
+    https : true,
+    baseURL : 'https://api.openweathermap.org/data/2.5/'
+
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

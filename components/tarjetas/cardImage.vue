@@ -7,6 +7,9 @@
     <div class="texto">
       <fa icon="map-marker-alt"/>   Singapure
     </div>
+    <div class="course-progress">
+			
+		</div>
 </div>
 
 
@@ -33,8 +36,9 @@ export default {
 }
 .imgRedonda-pequena {
     width:240px;
-    height:100px;
-    border-radius:35px;
+    height:80px;
+    border-radius:20px;
+    padding-bottom: 10px;
 }
 .imgRedonda-mediana {
     width:240px;
@@ -55,4 +59,5 @@ export default {
     font-weight: bold;
     margin-left: 20px;
 }
+
 </style>
