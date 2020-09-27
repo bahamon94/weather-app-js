@@ -1,7 +1,7 @@
 # weather-app-js
 
 ## Demo
-El repositorio del frontEnd donde se utiliza el backend de ejemplo
+El repositorio del frontEnd
 
 git clone https://github.com/bahamon94/weather-app-js
 ```bash
